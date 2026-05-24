@@ -6,7 +6,8 @@ const person = {
     console.log(this);
   },
   delay() {
-    setTimeout(ann.bind(this), 4000);
+    // setTimeout(ann.bind(this), 4000);
+    setTimeout(() => console.log(this), 4000);
   },
 };
 
