@@ -25,8 +25,8 @@ const genAI = {
     AGENT:"Anthropic"
 }
 
-const combindObjecst ={
-    ...llm, ide: "corser", ...genAI ,laguege: "python"
+const combindObjecst = {
+    ...chat, ide: "corser", ...genAI ,laguege: "python"
 }
 
 console.log(combindObjecst);
