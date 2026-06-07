@@ -44,7 +44,7 @@ class SuperAdmin extends Admin {
   constructor(email, name, passord) {
     super(email, name, passord);
   }
-
+  
   shutdownSystem() {
     console.log(`${this.name} is shut down the system`);
   }
