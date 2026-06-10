@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="">Home page</a>
+  <ul>
+    <li class="list-item">coffee</li>
+    <li class="list-item">tea</li>
+    <li class="list-item">milk</li>
+  </ul>
+  <script>
+    let listItems = document.getElementsByClassName("list-item")
+    listItems[2].innerHTML = '<a href="https://www.kore.co.il/" target="_blank">Kore</a>'
+
+    for (let i = 0; i < listItems.length; i++) {
+      listItems[i].style.color = "red"
+    }
+
+    let listItemsByTag = document.getElementsByTagName("li")
+
+    for (const item of listItemsByTag) {
+      item.style.backgroundColor = "aquamarine"
+    }
+  </script>
+</body>
+
+</html>
