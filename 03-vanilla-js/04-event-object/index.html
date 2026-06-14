@@ -6,35 +6,79 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="">
+    <form action="" id="form">
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name">
-    </div>
-    <div>
+        <input type="text" id="name" />
+      </div>
+      <div>
         <label for="email">Email</label>
-        <input type="email" id="email">
-    </div>
-    <!-- <input type="button" value="sudmit" id="button" onclick="buttonPressed()"> -->
-    <input type="button" value="sudmit" id="button"">
-
+        <input type="email" id="email" />
+      </div>
+      <!-- <input type="button" value="sudmit" id="button" onclick="buttonPressed()"> -->
+      <input type="button" value="sudmit" id="button" />
     </form>
-
+    <div style="height: 250px; width: 250px;" id="colors"></div>
     <script>
-        // function buttonPressed(){
-        //     alert("Hello")
-        // }
+      // function buttonPressed(){
+      //     alert("Hello")
+      // }
 
-        function buttonForm(){
-            let name = document.getElementById("name")
-            let valueName = name.value
-            let email = document.getElementById("email")
-            let valueEmail = email.value
-            alert(`Name is: ${valueName}, Email is: ${valueEmail}`);
-            
-        }
+      function buttonForm(){
+          let name = document.getElementById("name")
+          let valueName = name.value
+          let email = document.getElementById("email")
+          let valueEmail = email.value
+          alert(`Name is: ${valueName}, Email is: ${valueEmail}`);
 
-        document.getElementById("button").addEventListener("click", buttonForm)
+      }
+      
+      document.getElementById("button").addEventListener("click", buttonForm)
+
+      document
+        .getElementById("colors")
+        .addEventListener("mousemove", function (e) {
+          // console.log(e);
+          // console.log(e.type);
+          // console.dir(e.target);
+          // console.log(e.target.id);
+          let red = e.offsetX > 255 ? 255 : Math.abs(e.offsetX);
+          let green = e.offsetY > 255 ? 255 : Math.abs(e.offsetY);
+          let blue = Math.abs(red - green);
+
+          let redElem = document.getElementById("redElem");
+          let greenElem = document.getElementById("greenElem");
+          let blueElem = document.getElementById("blueElem");
+
+          if (!redElem) {
+            let redElem = document.createElement("div");
+            redElem.id = "redElem";
+            redElem.style.border = "red solid 5px";
+            document.body.appendChild(redElem);
+            redElem.textContent = red;
+          } else {
+            redElem.textContent = red;
+          }
+          if (!greenElem) {
+            let greenElem = document.createElement("div");
+            greenElem.id = "greenElem";
+            greenElem.style.border = "green solid 5px";
+            document.body.appendChild(greenElem);
+            greenElem.textContent = green;
+          } else {
+            greenElem.textContent = green;
+          }
+          if (!blueElem) {
+            let blueElem = document.createElement("div");
+            blueElem.id = "blueElem";
+            blueElem.style.border = "blue  solid 5px";
+            document.body.appendChild(blueElem);
+            blueElem.textContent = blue;
+          } else {
+            blueElem.textContent = blue;
+          }
+          this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+        });
     </script>
   </body>
 </html>
