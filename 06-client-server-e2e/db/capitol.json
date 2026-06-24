@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "nane": "congress",
+        "pliticians": [2, 4, 5]
+    },
+    {
+        "id": 2,
+        "nane": "cennate",
+        "pliticians": [1, 3, 4, 5]
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "president",
+        "credentials": ["red button", "war", "economy"]
+    },
+    {
+        "id": 2,
+        "name": "senator",
+        "credentials": ["war", "economy"]
+    },
+    {
+        "id": 3,
+        "name": "congres man",
+        "credentials": ["economy"]
+    }
+]
